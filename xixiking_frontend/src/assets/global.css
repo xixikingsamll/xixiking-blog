@@ -1,0 +1,33 @@
+/* 自定义滚动条宽度 */
+::-webkit-scrollbar {
+    width: 8px;
+    /* 滚动条的宽度 */
+}
+
+/* 滚动条轨道 */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    /* 滚动条轨道的背景色 */
+}
+
+/* 滚动条滑块 */
+::-webkit-scrollbar-thumb {
+    background-color: #07d4f8; 
+    /* 滑块的背景色 */
+    border-radius: 6px;
+    /* 滑块的圆角 */
+    border: 1px solid #f1f1f1;
+    /* 滑块的边框颜色，与轨道颜色一致 */
+}
+
+/* 滑块在鼠标悬停时的颜色 */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #b1acac;
+}
+
+@font-face {
+    font-family: 'CustomFont';
+    src: url('./ChildFunSans-Demo.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
