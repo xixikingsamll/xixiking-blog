@@ -8,6 +8,9 @@ const { add_article_schema, edit_article_schema } = require('../../schema/articl
 // 获取所有文章以及其相关的所有内容
 router.get('/api/article', article_handler.getArticle)
 
+// 获取对应ID的文章内容
+router.get('/api/article/:id', article_handler.getArticleById)
+
 // 创建新文章
 router.post('/admin/add/article', expressJoi(add_article_schema), article_handler.createArticle)
 

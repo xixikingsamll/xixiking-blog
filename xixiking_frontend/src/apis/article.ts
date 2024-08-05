@@ -19,3 +19,13 @@ export const getArticle = async (id: any) => {
         return error
     }
 }
+
+// 由id获取文章
+export const getArticleById = async (id: any) => {
+    try {
+        const response = await axiosInstance.get(`/api/article/${id}`)
+        return response
+    } catch (error) {
+        return error
+    }
+}

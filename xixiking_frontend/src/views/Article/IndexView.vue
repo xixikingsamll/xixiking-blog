@@ -23,6 +23,7 @@ import CategoryView from './components/CategoryView.vue';
     flex-wrap: wrap;
     gap: 20px;
     overflow: hidden;
+    min-height: 50vh;
     background: rgb(239, 255, 255);
 }
 

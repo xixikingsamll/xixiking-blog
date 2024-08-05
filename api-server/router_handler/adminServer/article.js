@@ -6,7 +6,6 @@ exports.getArticle = (req, res) => {
     if (categoryID != 0) {
         const sql = `select * from article where category_id=?`
         db.query(sql, categoryID, (err, results) => {
-            console.log(results);
             if (err) return res.cc(err)
             if (results.length === 0) return res.cc('获取文章失败')
 
@@ -21,6 +20,18 @@ exports.getArticle = (req, res) => {
             res.send({ status: 0, message: '获取文章成功', data: results })
         })
     }
+}
+
+// 获取对应id的文章内容
+exports.getArticleById = (req, res) => {
+    const articleID = req.params.id
+    console.log(articleID);
+    const sql = `select * from article where id=?`
+    db.query(sql, articleID, (err, results) => {
+        if (err) return res.cc(err)
+        if (results.length === 0) return res.cc('获取文章失败')
+        res.send({ status: 0, message: '获取文章成功', data: results })
+    })
 }
 
 // 创建新文章

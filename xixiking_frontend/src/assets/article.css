@@ -1,0 +1,18 @@
+.contentChild h1 {
+    font-weight: bold;
+}
+
+.contentChild h2 {
+    color: blue;
+    font-weight: bold;
+}
+
+.contentChild h3 {
+    color: green;
+    font-weight: bold;
+}
+
+.contentChild pre{
+    border-radius: 15px;
+    margin: 20px;
+}

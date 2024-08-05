@@ -1,10 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Home from '../views/Home/HomeView.vue'
-import Friend from '../views/FriendLink/FriendView.vue'
-import AdminView from '@/views/Admin/AdminView.vue'
-import AdminLogin from '@/views/Admin/LoginView.vue'
-import LoginView from '@/views/Login/LoginView.vue'
-import article from '@/views/Article/IndexView.vue'
+import Home from '../views/Home/HomeView.vue'  // 主页
+import Friend from '../views/FriendLink/FriendView.vue'  // 友链
+import AdminView from '@/views/Admin/AdminView.vue'  // 管理员主页
+import AdminLogin from '@/views/Admin/LoginView.vue'  // 管理员登录
+import LoginView from '@/views/Login/LoginView.vue'  // 登录
+import article from '@/views/Article/IndexView.vue'  // 文章
+import ArticleDetail from '@/views/Article/components/ArticleDetail.vue'  // 文章详情
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -26,7 +27,14 @@ const router = createRouter({
     {
       path: '/article',
       name: 'article',
-      component: article
+      component: article,
+    },
+
+    // 文章详情
+    {
+      path: '/article/:id',
+      name: 'ArticleDetail',
+      component: ArticleDetail
     },
 
     // 登录

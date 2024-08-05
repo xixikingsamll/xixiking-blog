@@ -11,10 +11,13 @@
     <div>
         美食<a-progress :stroke-color="{'0%': 'rgb(227, 23, 16)', '100%': 'rgb(227, 16, 143)',}" :percent="7" />
     </div>
+    <div>
+        音乐<a-progress :stroke-color="{'0%': 'rgb(227, 23, 16)', '100%': 'rgb(227, 16, 143)',}" :percent="7" />
+    </div>
 </template>
 
 <style scoped>
 div{
-    margin-top: 15px;
+    margin-top: 5px;
 }
 </style>

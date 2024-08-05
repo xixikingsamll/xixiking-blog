@@ -1,6 +1,7 @@
 <template>
     <div class="titleBox">
         <p>{{ title }}</p>
+        <slot></slot>
     </div>
 </template>
 
@@ -20,8 +21,6 @@ defineProps(['title'])
     font-size: 40px;
     font-weight: bold;
     color: #000;
-}
-.titleBox p:nth-child(2){
-    font-size: 20px;
+    padding-top: 64px;
 }
 </style>
